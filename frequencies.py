@@ -1,5 +1,7 @@
 from manim import *
 
+# manim -qm --format=gif --save_sections frequencies.py
+
 with open("frequencies_work.csv") as n:
     table = [line.strip().split(",") for line in n.readlines()]
 
@@ -14,8 +16,11 @@ for k, v in data.items():
 
 class Generate(Scene):
     def construct(self) -> None:
-        text = Text("Testing")
+        for value in ["test1", "test2", "test3"]:
+            text = Text(value)
 
-        self.play(FadeIn(text), run_time=0.2)
-        self.play(FadeOut(text), run_time=0.4)
-        self.wait(0.4)
+            self.play(FadeIn(text), run_time=0.2)
+            self.play(FadeOut(text), run_time=0.4)
+            self.wait(0.4)
+
+            self.next_section()
