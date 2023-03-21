@@ -12,15 +12,14 @@ for line in table:
 # transform frequencies into times
 for k, v in data.items():
     data[k][0] = 1 / data[k][0] * TIME_FACTOR
-
-print(data)
+    print(k, data[k])
 
 # run animations
 for k, v in data.items():
     phrase = k
     time, part = data[k]
 
-    os.system(f"manim -qm --format=gif animate.py -o \"{phrase}\" {time} {part}")
+    os.system(f"manim -ql animate.py -o \"{phrase}\" {time} {part}")
 
 
 # for value in ["test1", "test2", "test3"]:
