@@ -13,12 +13,14 @@ for line in table:
 for k, v in data.items():
     data[k][0] = 1 / data[k][0] * TIME_FACTOR
 
-# run animations
-# for k, v in data.items():
-#     phrase = k
-#     time, part = data[k]
+print(data)
 
-#     os.system(f"manim -qm --format=gif animate.py -o \"{phrase}\" {time} {part}")
+# run animations
+for k, v in data.items():
+    phrase = k
+    time, part = data[k]
+
+    os.system(f"manim -qm --format=gif animate.py -o \"{phrase}\" {time} {part}")
 
 
 # for value in ["test1", "test2", "test3"]:
