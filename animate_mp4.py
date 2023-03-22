@@ -35,13 +35,14 @@ class Generate(Scene):
 
             count += 1
             y = 0
-            if ("b" in phrase) or ("h" in phrase) or ("l" in phrase):
-                y += 0.10820312
             if ("i" in phrase):
                 y += 0.1140625
-            if ("y" in phrase):
+            elif ("b" in phrase) or ("h" in phrase) or ("l" in phrase) or ("k" in phrase):
+                y += 0.10820312
+
+            if ("y" in phrase) or ("p" in phrase):
                 y -= 0.2609375
-            if ("g" in phrase):
+            elif ("g" in phrase):
                 y -= 0.277734375
 
             text.move_to((0, y, 0))

@@ -5,20 +5,20 @@
 }
 
 body {
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     background: rgb(68, 68, 68);
 }
 
 table {
     border-spacing: 0px;
-    width: 100vw;
+    width: 99vw;
     height: 100vh;
 }
 
 td {
-    border: 2px solid orange;
+    width: 15vw;
 }
 
 video {
-    border: 2px solid pink;
+    width: 100%;
 }
