@@ -5,7 +5,7 @@ BACKGROUND_COLOR = "#444444"
 TEXT_OFF_COLOR = "#222222"
 TIME_FACTOR = 80
 
-with open("frequencies_work.csv") as n:
+with open("src/frequencies_work.csv") as n:
     table = [line.strip().split(",") for line in n.readlines()]
 
 # pull phrase, frequency, and type from file
